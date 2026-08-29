@@ -9,7 +9,7 @@ class AdminController extends Controller
 {
     function blog()
     {
-        $blogs = DB::table('blogs')->get();
+        $blogs = DB::table('blogs')->paginate(3);
         return View('blogs', compact('blogs'));
     }
     function about()

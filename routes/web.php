@@ -20,6 +20,15 @@ Route::get('/', function () {
 
 Route::get('/abouts', [AdminController::class, 'about'])->name('abouts');
 
+// Blog Management System Routes
+Route::get('/blogs', [AdminController::class, 'blog'])->name('blogs');
+Route::get('/create', [AdminController::class, 'create'])->name('create');
+Route::post('/insert', [AdminController::class, 'insert'])->name('insert');
+Route::get('/blogs/delete/{id}', [AdminController::class, 'delete'])->name('delete');
+Route::get('/blogs/edit/{id}', [AdminController::class, 'edit'])->name('edit');
+Route::post('/blogs/update/{id}', [AdminController::class, 'update'])->name('update');
+Route::get('/blogs/change/{id}', [AdminController::class, 'change'])->name('change');
+
 // Product Management System Routes
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 Route::get('/product/change/{id}', [ProductController::class, 'changeStatus'])->name('products.change');

@@ -69,6 +69,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto gap-2">
                     <li class="nav-item">
+                        <a class="nav-link {{ Route::is('blogs*') ? 'active text-info' : '' }}" href="{{ route('blogs') }}">บทความ</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link {{ Route::is('products.index') ? 'active text-info' : '' }}" href="{{ route('products.index') }}">จัดการคลังสินค้า</a>
                     </li>
                     <li class="nav-item">
